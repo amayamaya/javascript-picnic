@@ -8,6 +8,8 @@ const bread = document.getElementById('bread');
 // console.log(bread);
 const watermelon = document.getElementById('watermelon');
 // console.log(watermelon);
+const choose = document.getElementById('choose')
+// console.log(choose)
 
 soda.addEventListener('click', () => {
     soda.classList.toggle('picked');
@@ -29,3 +31,7 @@ watermelon.addEventListener('click', () => {
     watermelon.classList.toggle('picked');   
 });
 
+choose.addEventListener('click', () => {
+    const item = [soda, cheese, grapes, bread, watermelon];
+    item[Math.floor(Math.random() *5)].classList.toggle('picked');
+})
